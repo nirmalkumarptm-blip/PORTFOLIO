@@ -108,3 +108,37 @@ function typeEffect() {
 if (typingText) {
     typeEffect();
 }
+
+
+/* SKILL PROGRESS ANIMATION */
+
+const skillSection = document.querySelector("#skills");
+
+const skillObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            document.querySelectorAll(".skill-progress").forEach(bar => {
+
+                const width = bar.getAttribute("data-width");
+
+                bar.style.setProperty("--skill-width", width);
+
+                bar.classList.add("animate");
+
+            });
+
+            skillObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.3
+});
+
+if (skillSection) {
+    skillObserver.observe(skillSection);
+}
