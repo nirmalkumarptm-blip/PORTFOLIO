@@ -333,3 +333,39 @@ footer {
     transform: translateY(0);
 }
 
+
+/* ANIMATED GRADIENT TEXT */
+
+#typing-text {
+    background: linear-gradient(
+        90deg,
+        #2878ff,
+        #00b8ff,
+        #7658ff,
+        #2878ff
+    );
+
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 4s linear infinite;
+}
+
+.cursor {
+    color: #2878ff;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes gradientMove {
+    to {
+        background-position: 300% center;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
