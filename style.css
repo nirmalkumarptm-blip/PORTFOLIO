@@ -1041,3 +1041,28 @@ footer {
     }
 
 }
+
+
+/* VISITOR COUNTER */
+
+.visitor-counter {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f4f8ff;
+    border: 1px solid #d8e5ff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.visitor-counter h4 {
+    color: #2878ff;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#visitor-count {
+    font-size: 24px;
+    font-weight: 700;
+    color: #172b4d;
+}
+
