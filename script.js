@@ -3,7 +3,9 @@
 // NIRMAL PORTFOLIO - JAVASCRIPT
 // =================================
 
-// Smooth scrolling
+
+// SMOOTH SCROLLING
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.addEventListener('click', function(e) {
@@ -13,11 +15,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         );
 
         if (target) {
+
             e.preventDefault();
 
             target.scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
+                block: 'start'
             });
+
         }
 
     });
@@ -25,9 +30,12 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 
-// Scroll reveal animation
+// =================================
+// SCROLL REVEAL ANIMATION
+// =================================
+
 const sections = document.querySelectorAll(
-    '.about, .skills, .projects, .contact'
+    '.about, .skills, .projects, .education, .languages, .career, .contact'
 );
 
 const observer = new IntersectionObserver(entries => {
@@ -45,18 +53,14 @@ const observer = new IntersectionObserver(entries => {
     });
 
 }, {
-    threshold: 0.15
+    threshold: 0.12
 });
 
 sections.forEach(section => {
+
     observer.observe(section);
+
 });
-
-
-// Console welcome message
-console.log(
-    'Welcome to Nirmal Portfolio!'
-);
 
 
 // =================================
@@ -69,6 +73,7 @@ const words = [
     "Developer",
     "Web Designer",
     "Programmer",
+    "Software Enthusiast",
     "Creative Thinker"
 ];
 
@@ -78,12 +83,18 @@ let deleting = false;
 
 function typeEffect() {
 
+    if (!typingText) return;
+
     const currentWord = words[wordIndex];
 
     if (deleting) {
+
         charIndex--;
+
     } else {
+
         charIndex++;
+
     }
 
     typingText.textContent =
@@ -92,25 +103,36 @@ function typeEffect() {
     let speed = deleting ? 60 : 110;
 
     if (!deleting && charIndex === currentWord.length) {
+
         deleting = true;
         speed = 1500;
+
     }
 
     else if (deleting && charIndex === 0) {
+
         deleting = false;
+
         wordIndex = (wordIndex + 1) % words.length;
+
         speed = 400;
+
     }
 
     setTimeout(typeEffect, speed);
+
 }
 
 if (typingText) {
+
     typeEffect();
+
 }
 
 
-/* SKILL PROGRESS ANIMATION */
+// =================================
+// SKILL PROGRESS ANIMATION
+// =================================
 
 const skillSection = document.querySelector("#skills");
 
@@ -124,13 +146,21 @@ const skillObserver = new IntersectionObserver(entries => {
 
                 const width = bar.getAttribute("data-width");
 
-                bar.style.setProperty("--skill-width", width);
+                if (width) {
 
-                bar.classList.add("animate");
+                    bar.style.setProperty(
+                        "--skill-width",
+                        width
+                    );
+
+                    bar.classList.add("animate");
+
+                }
 
             });
 
             skillObserver.unobserve(entry.target);
+
         }
 
     });
@@ -140,5 +170,20 @@ const skillObserver = new IntersectionObserver(entries => {
 });
 
 if (skillSection) {
+
     skillObserver.observe(skillSection);
+
 }
+
+
+// =================================
+// CONSOLE WELCOME MESSAGE
+// =================================
+
+console.log(
+    "Welcome to Nirmal Portfolio!"
+);
+
+console.log(
+    "Designed and Developed by Nirmal."
+);
