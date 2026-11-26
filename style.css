@@ -312,3 +312,24 @@ footer {
 
 }
 
+
+/* SCROLL REVEAL ANIMATION */
+
+.about,
+.skills,
+.projects,
+.contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.about.show,
+.skills.show,
+.projects.show,
+.contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
