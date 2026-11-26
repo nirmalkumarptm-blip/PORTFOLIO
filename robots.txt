@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nirmalkumarptm-blip.github.io/PORTFOLIO/sitemap.xml
