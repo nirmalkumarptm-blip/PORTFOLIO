@@ -833,3 +833,211 @@ footer {
         padding: 22px;
     }
 }
+
+
+/* ==================================
+   UPDATED PORTFOLIO SECTIONS
+================================== */
+
+/* LANGUAGES SECTION */
+
+.languages {
+    background: #f8faff;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.languages .about-cards {
+    max-width: 950px;
+    margin: auto;
+}
+
+
+/* CAREER OBJECTIVE SECTION */
+
+.career {
+    background: #ffffff;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.career .about-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: #f8faff;
+    border: 1px solid #e8efff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(40,120,255,0.05);
+}
+
+.career .about-content p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    background: #f8faff;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+.contact-info,
+.contact-form-area {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #e8efff;
+    box-shadow: 0 8px 30px rgba(40,120,255,0.05);
+    transition: 0.4s;
+}
+
+.contact-info:hover,
+.contact-form-area:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(40,120,255,0.10);
+}
+
+.contact-info h3,
+.contact-form-area h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #172033;
+}
+
+.contact-info > p,
+.contact-form-area > p {
+    font-size: 14px;
+    color: #707b8c;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-top: 25px;
+}
+
+.contact-item h4 {
+    font-size: 14px;
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.contact-item p,
+.contact-item a {
+    font-size: 14px;
+    color: #707b8c;
+    text-decoration: none;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+    color: #2878ff;
+}
+
+.contact-form-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-form-area .primary-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* FOOTER UPDATE */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.7;
+}
+
+
+/* SCROLL REVEAL - ALL SECTIONS */
+
+.about,
+.skills,
+.projects,
+.education,
+.languages,
+.career,
+.contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.about.show,
+.skills.show,
+.projects.show,
+.education.show,
+.languages.show,
+.career.show,
+.contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* RESPONSIVE - NEW SECTIONS */
+
+@media (max-width: 768px) {
+
+    .languages,
+    .career,
+    .contact {
+        padding: 80px 7%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-area {
+        padding: 28px;
+    }
+
+    .career .about-content {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .languages .about-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .contact-info h3,
+    .contact-form-area h3 {
+        font-size: 21px;
+    }
+
+}
