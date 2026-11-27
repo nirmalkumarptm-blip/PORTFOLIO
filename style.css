@@ -1062,3 +1062,46 @@ footer {
     transform: translateY(-2px);
 }
 
+
+/* DARK THEME */
+
+body.dark-mode {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+body.dark-mode .header,
+body.dark-mode footer {
+    background: #080e1a;
+    color: #ffffff;
+}
+
+body.dark-mode section {
+    background-color: #0b1220;
+    color: #e5e7eb;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .timeline-content,
+body.dark-mode .contact-form-area,
+body.dark-mode .contact-info {
+    background: #172338;
+    color: #ffffff;
+    border-color: #263a56;
+}
+
+body.dark-mode p {
+    color: #cbd5e1;
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .navbar a {
+    color: #ffffff;
+}
