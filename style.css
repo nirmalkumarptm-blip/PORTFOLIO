@@ -1043,3 +1043,22 @@ footer {
 }
 
 
+/* DARK / LIGHT MODE BUTTON */
+
+.theme-toggle {
+    background: #2878ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #1558d6;
+    transform: translateY(-2px);
+}
+
